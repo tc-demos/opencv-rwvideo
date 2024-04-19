@@ -1,0 +1,9 @@
+.venv
+venv
+__pycache__
+
+*.mp4
+*.mkv
+
+.idea
+.vscode
