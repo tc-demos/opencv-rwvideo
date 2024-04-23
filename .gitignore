@@ -1,9 +1,12 @@
+# Python
 .venv
 venv
 __pycache__
 
+# Videos that are written
 *.mp4
 *.mkv
 
+# Editors
 .idea
 .vscode
