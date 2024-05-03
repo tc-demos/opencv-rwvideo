@@ -4,7 +4,7 @@ def main():
     lfuncs = [{"title": "Exit", "func": None},
         {"title": "Copy video file", "fn": copyVideo_Method1},
         {"title": "Capture video segment", "fn": capture},
-       # {"title": "Display a live image", "fn": displayLiveImage},
+        {"title": "Display a live image", "fn": displayLiveImage},
     ]
 
     while True:

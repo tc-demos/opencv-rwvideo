@@ -107,3 +107,30 @@ def capture():
         numFramesRemaining -= 1
     print('*')
     print("Video capture finished")
+
+
+def onMouse(event, x, y, flags, param):
+    global clicked
+    if event == cv2.EVENT_LBUTTONUP:
+        clicked = True
+
+
+def displayLiveImage():
+    global clicked
+    clicked = False
+
+    cameraCapture = cv2.VideoCapture(0)
+
+    cv2.namedWindow('The windoe')
+    cv2.setMouseCallback('The windoe', onMouse)
+
+    print("Showing camera feed. Click window or press any key to stop.")
+
+    success, frame = cameraCapture.read()
+
+    while success and cv2.waitKey(1) == -1 and not clicked:
+        cv2.imshow('The windoe', frame)
+        success, frame = cameraCapture.read()
+
+    cv2.destroyWindow('The windoe')
+    cameraCapture.release()
